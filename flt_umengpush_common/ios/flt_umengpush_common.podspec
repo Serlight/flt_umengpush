@@ -16,6 +16,7 @@ A new Flutter plugin by umeng push common
   s.public_header_files = 'Classes/**/*.h'
   s.dependency 'Flutter'
   s.dependency 'UMCCommon'
+  s.static_framework = true
 
   s.ios.deployment_target = '8.0'
 end
