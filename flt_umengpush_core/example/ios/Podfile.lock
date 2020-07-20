@@ -1,5 +1,5 @@
 PODS:
-  - flt_umengpush_core (0.0.1):
+  - flt_umengpush_core (1.0.0):
     - Flutter
     - UMCPush
   - Flutter (1.0.0)
@@ -23,11 +23,11 @@ EXTERNAL SOURCES:
     :path: ".symlinks/flutter/ios"
 
 SPEC CHECKSUMS:
-  flt_umengpush_core: 98073faa64791a2ef23ee997a79bd217767a294e
+  flt_umengpush_core: 7373b143a992f45ab9394bdf07149e0a01a1412f
   Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
   UMCCommon: 971f324a5a99c9d662ae040a815e7e3d7ef8b2a8
   UMCPush: 1edd856027dcf905333effb4040ace5d236a7316
 
 PODFILE CHECKSUM: 7fb83752f59ead6285236625b82473f90b1cb932
 
-COCOAPODS: 1.8.3
+COCOAPODS: 1.9.1

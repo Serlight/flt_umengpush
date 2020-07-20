@@ -4,11 +4,13 @@ import android.content.Context
 import android.text.TextUtils
 import android.util.Log
 import com.umeng.commonsdk.UMConfigure
+import com.umeng.analytics.MobclickAgent
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.plugin.common.MethodChannel.Result
 import io.flutter.plugin.common.PluginRegistry.Registrar
+
 
 class FltUmengpushCommonPlugin(var registrar: Registrar): MethodCallHandler {
   companion object {
@@ -62,6 +64,19 @@ class FltUmengpushCommonPlugin(var registrar: Registrar): MethodCallHandler {
       UMConfigure.init(registrar.context(), appKey, channel, deviceType, secret)
 
       result.success(null)
+    } else if(call.method == "pageStart") {
+      var viewName = call.argument<String>("viewName")
+      MobclickAgent.onPageStart(viewName)
+      result.success(true)
+    } else if(call.method == "pageEnd") {
+      var viewName = call.argument<String>("viewName")
+      MobclickAgent.onPageEnd(viewName)
+      result.success(true)
+    } else if(call.method == "event") {
+      var eventId = call.argument<String>("eventId")
+      var label = call.argument<String>("label")
+      MobclickAgent.onEvent(registrar.context(), eventId, label)
+      result.success(true)
     } else {
       result.notImplemented()
     }

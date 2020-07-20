@@ -1,9 +1,9 @@
 PODS:
-  - flt_umengpush_common (1.0.0):
+  - flt_umengpush_common (1.0.2):
     - Flutter
     - UMCCommon
   - Flutter (1.0.0)
-  - UMCCommon (2.1.1)
+  - UMCCommon (7.1.0)
 
 DEPENDENCIES:
   - flt_umengpush_common (from `.symlinks/plugins/flt_umengpush_common/ios`)
@@ -20,10 +20,10 @@ EXTERNAL SOURCES:
     :path: ".symlinks/flutter/ios"
 
 SPEC CHECKSUMS:
-  flt_umengpush_common: a2e21ddc2b7b448ece912d25c97b303233f32d98
+  flt_umengpush_common: 16134cde4a00adc85909eb7e790828821e9717e5
   Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
-  UMCCommon: 971f324a5a99c9d662ae040a815e7e3d7ef8b2a8
+  UMCCommon: 4e80f93492d300245683236668763dc5d0b04dbd
 
 PODFILE CHECKSUM: 1487a152faa25775a1a3a47d606652845138f21d
 
-COCOAPODS: 1.8.3
+COCOAPODS: 1.9.1

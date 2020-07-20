@@ -31,4 +31,34 @@ class FltUmengpushCommon {
   static Future<Void> setLogEnabled(bool enabled) async {
     return await _channel.invokeMethod('setLogEnabled', {"enabled": enabled});
   }
+
+  static Future<bool> pageStart(String viewName) async {
+    Map<String, dynamic> map = {
+      'viewName': viewName,
+    };
+
+    return _channel.invokeMethod<bool>('pageStart', map);
+  }
+
+  /// Send a page end event for [viewName]
+  static Future<bool> pageEnd(String viewName) async {
+    Map<String, dynamic> map = {
+      'viewName': viewName,
+    };
+
+    return _channel.invokeMethod<bool>('pageEnd', map);
+  }
+
+  /// Send a general event for [eventId] with a [label]
+  static Future<bool> event(String eventId, {String label}) async {
+    Map<String, dynamic> map = {
+      'eventId': eventId,
+    };
+
+    if (label != null) {
+      map['label'] = label;
+    }
+
+    return _channel.invokeMethod<bool>('event', map);
+  }
 }
