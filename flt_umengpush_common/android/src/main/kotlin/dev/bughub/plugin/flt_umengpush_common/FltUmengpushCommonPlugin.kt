@@ -11,7 +11,6 @@ import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.plugin.common.MethodChannel.Result
 import io.flutter.plugin.common.PluginRegistry.Registrar
 
-
 class FltUmengpushCommonPlugin(var registrar: Registrar): MethodCallHandler {
   companion object {
     @JvmStatic

@@ -30,7 +30,10 @@ android {
     compileSdkVersion 28
 
     sourceSets {
-        main.java.srcDirs += 'src/main/kotlin'
+        main {
+            java.srcDirs += 'src/main/kotlin'
+            jniLibs.srcDirs = ['libs']
+        }
     }
     defaultConfig {
         minSdkVersion 16
@@ -44,7 +47,7 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'com.umeng.umsdk:push:6.0.1'
+    implementation 'com.umeng.umsdk:push:6.1.0'
 
     implementation 'com.umeng.umsdk:huawei-basetb:2.6.3.306'
     implementation 'com.umeng.umsdk:huawei-pushtb:2.6.3.306'
