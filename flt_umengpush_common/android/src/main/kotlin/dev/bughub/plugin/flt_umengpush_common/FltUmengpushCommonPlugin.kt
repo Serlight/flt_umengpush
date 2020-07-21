@@ -66,13 +66,11 @@ class FltUmengpushCommonPlugin(var registrar: Registrar): MethodCallHandler {
       result.success(null)
     } else if(call.method == "pageStart") {
       var viewName = call.argument<String>("viewName")
-//      MobclickAgent.onPageStart(viewName)
-      MobclickAgent.onEvent(registrar.context(),"pageStart", viewName)
+      MobclickAgent.onPageStart(viewName)
       result.success(true)
     } else if(call.method == "pageEnd") {
       var viewName = call.argument<String>("viewName")
-//      MobclickAgent.onPageEnd(viewName)
-      MobclickAgent.onEvent(registrar.context(),"pageEnd", viewName)
+      MobclickAgent.onPageEnd(viewName)
       result.success(true)
     } else if(call.method == "event") {
       var eventId = call.argument<String>("eventId")
