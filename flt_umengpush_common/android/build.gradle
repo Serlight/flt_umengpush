@@ -41,6 +41,7 @@ android {
 }
 
 dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     api  'com.umeng.umsdk:common:1.5.4'
     api 'com.umeng.umsdk:analytics:9.0.3'
