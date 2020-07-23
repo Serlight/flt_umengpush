@@ -30,7 +30,6 @@ class FltUmengpushCommonPlugin(var registrar: Registrar): MethodCallHandler {
         Log.e("UmengpushCommonPlugin","appKey is null")
         return
       }
-      UMConfigure.setLogEnabled(true)
       UMConfigure.init(context, appKey, channel, deviceType, secret)
     }
   }
